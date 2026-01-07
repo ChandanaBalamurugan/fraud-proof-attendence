@@ -1,8 +1,9 @@
 import os
 import cv2
-import face_recognition
 import pickle
 import numpy as np
+from PIL import Image
+from deepface import DeepFace
 
 # ================= PATHS =================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -39,28 +40,36 @@ for person_name in os.listdir(FACES_DIR):
         img_path = os.path.join(person_path, img_name)
         print(f"   📸 Reading: {img_name}")
 
-        image = cv2.imread(img_path)
-
-        if image is None:
-            print("   ❌ Failed to read image")
+        try:
+            image = Image.open(img_path)
+            rgb = np.array(image.convert('RGB'))
+            rgb = np.ascontiguousarray(rgb, dtype=np.uint8)
+        except Exception as e:
+            print(f"   ❌ Failed to read image: {e}")
             continue
 
-        rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        rgb = np.ascontiguousarray(rgb, dtype=np.uint8)
-
-        face_locations = face_recognition.face_locations(rgb)
-
-        if len(face_locations) == 0:
-            print("   ⚠️ No face detected")
+        try:
+            image = Image.open(img_path)
+            rgb = np.array(image.convert('RGB'))
+        except Exception as e:
+            print(f"   ❌ Failed to read image: {e}")
             continue
 
-        encodings = face_recognition.face_encodings(rgb, face_locations)
+        print(f"   RGB shape: {rgb.shape}, dtype: {rgb.dtype}")
 
-        if len(encodings) == 0:
-            print("   ⚠️ Encoding failed")
+        try:
+            # Use DeepFace to detect and encode face
+            result = DeepFace.represent(img_path, model_name='VGG-Face', enforce_detection=True)
+            if isinstance(result, list) and len(result) > 0:
+                encoding = result[0]['embedding']
+            else:
+                print("   ⚠️ No face detected or encoded")
+                continue
+        except Exception as e:
+            print(f"   ❌ Error processing face: {e}")
             continue
 
-        known_encodings.append(encodings[0])
+        known_encodings.append(encoding)
         known_names.append(person_name)
 
         print("   ✅ Face encoded")

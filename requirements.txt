@@ -1,0 +1,11 @@
+opencv-python
+numpy
+pillow
+flask
+flask-cors
+firebase-admin
+mtcnn
+deepface
+scipy
+mediapipe
+tensorflow

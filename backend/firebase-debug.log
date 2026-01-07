@@ -1,0 +1,53 @@
+[debug] [2026-01-07T17:26:59.778Z] ----------------------------------------------------------------------
+[debug] [2026-01-07T17:26:59.784Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LENOVO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-01-07T17:26:59.784Z] CLI Version:   15.1.0
+[debug] [2026-01-07T17:26:59.784Z] Platform:      win32
+[debug] [2026-01-07T17:26:59.785Z] Node Version:  v22.14.0
+[debug] [2026-01-07T17:26:59.785Z] Time:          Wed Jan 07 2026 22:56:59 GMT+0530 (India Standard Time)
+[debug] [2026-01-07T17:26:59.785Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-07T17:27:03.298Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-07T17:27:03.298Z] > authorizing via signed-in user (kavyabalamurugan04@gmail.com)
+[debug] [2026-01-07T17:27:03.298Z] [iam] checking project fraud-proof-attendance-9bbea for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-01-07T17:27:03.300Z] Checked if tokens are valid: false, expires at: 1717826846771
+[debug] [2026-01-07T17:27:03.300Z] Checked if tokens are valid: false, expires at: 1717826846771
+[debug] [2026-01-07T17:27:03.300Z] > refreshing access token with scopes: []
+[debug] [2026-01-07T17:27:03.302Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-07T17:27:03.302Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-07T17:27:03.516Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-01-07T17:27:03.516Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-07T17:27:03.517Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/fraud-proof-attendance-9bbea:testIamPermissions [none]
+[debug] [2026-01-07T17:27:03.517Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/fraud-proof-attendance-9bbea:testIamPermissions x-goog-quota-user=projects/fraud-proof-attendance-9bbea
+[debug] [2026-01-07T17:27:03.517Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fraud-proof-attendance-9bbea:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-07T17:27:04.947Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/fraud-proof-attendance-9bbea:testIamPermissions 401
+[debug] [2026-01-07T17:27:04.948Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/fraud-proof-attendance-9bbea:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2026-01-07T17:27:04.948Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-01-07T17:27:04.948Z] Checked if tokens are valid: false, expires at: 1717826846771
+[debug] [2026-01-07T17:27:04.948Z] Checked if tokens are valid: false, expires at: 1717826846771
+[debug] [2026-01-07T17:27:04.948Z] > refreshing access token with scopes: []
+[debug] [2026-01-07T17:27:04.949Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-07T17:27:04.949Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-07T17:27:05.021Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-01-07T17:27:05.021Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-07T17:27:05.023Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/fraud-proof-attendance-9bbea:testIamPermissions had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2026-01-07T17:27:05.025Z] Checked if tokens are valid: false, expires at: 1717826846771
+[debug] [2026-01-07T17:27:05.025Z] Checked if tokens are valid: false, expires at: 1717826846771
+[debug] [2026-01-07T17:27:05.025Z] > refreshing access token with scopes: []
+[debug] [2026-01-07T17:27:05.026Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-07T17:27:05.026Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-07T17:27:05.111Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-01-07T17:27:05.111Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-07T17:27:05.112Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fraud-proof-attendance-9bbea [none]
+[debug] [2026-01-07T17:27:05.510Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fraud-proof-attendance-9bbea 401
+[debug] [2026-01-07T17:27:05.511Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fraud-proof-attendance-9bbea {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2026-01-07T17:27:05.511Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-01-07T17:27:05.511Z] Checked if tokens are valid: false, expires at: 1717826846771
+[debug] [2026-01-07T17:27:05.512Z] Checked if tokens are valid: false, expires at: 1717826846771
+[debug] [2026-01-07T17:27:05.512Z] > refreshing access token with scopes: []
+[debug] [2026-01-07T17:27:05.513Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-01-07T17:27:05.513Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-07T17:27:05.594Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2026-01-07T17:27:05.594Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-01-07T17:27:05.595Z] Request to https://firebase.googleapis.com/v1beta1/projects/fraud-proof-attendance-9bbea had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier

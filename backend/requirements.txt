@@ -1,7 +1,11 @@
 opencv-python
-mediapipe
 numpy
 pillow
 flask
-torch
-torchvision
+flask-cors
+firebase-admin
+mtcnn
+deepface
+scipy
+mediapipe
+tensorflow

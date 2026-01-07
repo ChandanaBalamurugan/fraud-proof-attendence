@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud-Proof Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Fraud-Proof Attendance System</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('camera')">Camera Attendance</button>
+            <button class="tab-button" onclick="showTab('manual')">Manual Attendance</button>
+            <button class="tab-button" onclick="showTab('records')">View Records</button>
+        </div>
+
+        <div id="camera-tab" class="tab-content active">
+            <div class="camera-section">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <div class="controls">
+                    <button id="start-camera" class="btn primary">Start Camera</button>
+                    <button id="capture" class="btn success" disabled>Capture & Process</button>
+                    <button id="stop-camera" class="btn danger" disabled>Stop Camera</button>
+                </div>
+                <div id="status" class="status"></div>
+            </div>
+        </div>
+
+        <div id="manual-tab" class="tab-content">
+            <div class="manual-section">
+                <input type="text" id="name-input" placeholder="Enter name" class="input-field">
+                <button id="mark-manual" class="btn primary">Mark Attendance</button>
+                <div id="manual-status" class="status"></div>
+            </div>
+        </div>
+
+        <div id="records-tab" class="tab-content">
+            <div class="records-section">
+                <button id="refresh-records" class="btn secondary">Refresh Records</button>
+                <div id="records-list" class="records-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

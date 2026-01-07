@@ -1,8 +1,12 @@
 import cv2
 import os
+import sys
 
 # Ask for user name
-name = input("Enter your name: ")
+if len(sys.argv) > 1:
+    name = sys.argv[1]
+else:
+    name = input("Enter your name: ")
 
 # Create folder to save face images
 save_path = f"../data/faces/{name}"  # relative to utils folder
@@ -33,7 +37,7 @@ while True:
         count += 1
 
         # Save image
-        cv2.imwrite(f"{save_path}/img_{count}.jpg", face)
+        cv2.imwrite(f"{save_path}/img_{count}.png", face)
 
         # Draw rectangle for visualization
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
