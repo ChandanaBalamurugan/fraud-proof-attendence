@@ -6,9 +6,23 @@ __pycache__/
 # Environment
 .env
 
+# Firebase credentials (contains secrets)
+backend/serviceAccountKey.json
+serviceAccountKey.json
+
 # Data / runtime files
 attendance.csv
 
 # OS
 .DS_Store
 Thumbs.db
+.DS_Store
+
+# Environment
+.env
+
+# Firebase
+firebase-key.json
+
+# Face encodings (optional)
+backend/data/encodings/
