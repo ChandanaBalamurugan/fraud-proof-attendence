@@ -17,3 +17,5 @@ for person, enc_list in known_encodings.items():
     print(f"Person: {person}")
     for i, enc in enumerate(enc_list):
         print(f"  Face {i} dtype: {enc.dtype}, shape: {enc.shape}")
+
+

@@ -3,5 +3,9 @@ mediapipe
 numpy
 pillow
 flask
+flask-cors
 torch
 torchvision
+face-recognition
+pandas
+openpyxl

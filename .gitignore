@@ -1,14 +1,28 @@
-# Python
+# Virtual Environment
 venv/
+
+# Python
 __pycache__/
 *.pyc
 
-# Environment
+# Environment variables
 .env
 
-# Data / runtime files
+# Logs
+logs/
+
+# Model files
+*.pth
+*.pkl
+*.pickle
+
+# Firebase / Secret keys
+*.json
+
+# Runtime data
 attendance.csv
 
-# OS
+# OS files
 .DS_Store
 Thumbs.db
+
